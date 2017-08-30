@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sounds</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="init()">
+        <script src="src/js/pubnub-3.4.4.js" type="text/javascript"></script>
+        <script src="src/js/sound.js" type="text/javascript"></script>
+        <!-- -->
+        <script>
+        function init() {
+            for (var runner = 0; runner < 4; runner++) {
+                document.write("<input style='margin-left:0.5%' type='button' value='PlaySound#" + (runner + 1) + "' onclick='playSound(" + (runner + 1) + ")'/>");
+            }
+        }
+        //--
+        function playSound(number) {
+            sounds.play("src/sounds/" + number);
+        }
+        </script>
+
+    </body>
+</html>
